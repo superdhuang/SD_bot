@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B95E5BF5160F64D8003CE239 /* chance.m in Sources */ = {isa = PBXBuildFile; fileRef = B95E5BF4160F64D8003CE239 /* chance.m */; };
-		B95E5BFB1610B614003CE239 /* UIWebControll.m in Sources */ = {isa = PBXBuildFile; fileRef = B95E5BFA1610B614003CE239 /* UIWebControll.m */; };
+		B95E5CE31611E791003CE239 /* expUIWeb.m in Sources */ = {isa = PBXBuildFile; fileRef = B95E5CE21611E791003CE239 /* expUIWeb.m */; };
 		B99D06AA160DE05D003C88A5 /* house.png in Resources */ = {isa = PBXBuildFile; fileRef = B99D06A9160DE05D003C88A5 /* house.png */; };
 		B99D06AD160DE12B003C88A5 /* map-mark.png in Resources */ = {isa = PBXBuildFile; fileRef = B99D06AC160DE12B003C88A5 /* map-mark.png */; };
 		B99D06AF160DE181003C88A5 /* wrench.png in Resources */ = {isa = PBXBuildFile; fileRef = B99D06AE160DE181003C88A5 /* wrench.png */; };
@@ -36,8 +36,8 @@
 /* Begin PBXFileReference section */
 		B95E5BF3160F64D8003CE239 /* chance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chance.h; sourceTree = "<group>"; };
 		B95E5BF4160F64D8003CE239 /* chance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = chance.m; sourceTree = "<group>"; };
-		B95E5BF91610B614003CE239 /* UIWebControll.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIWebControll.h; sourceTree = "<group>"; };
-		B95E5BFA1610B614003CE239 /* UIWebControll.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIWebControll.m; sourceTree = "<group>"; };
+		B95E5CE11611E791003CE239 /* expUIWeb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = expUIWeb.h; sourceTree = "<group>"; };
+		B95E5CE21611E791003CE239 /* expUIWeb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = expUIWeb.m; sourceTree = "<group>"; };
 		B99D06A9160DE05D003C88A5 /* house.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = house.png; sourceTree = "<group>"; };
 		B99D06AC160DE12B003C88A5 /* map-mark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map-mark.png"; sourceTree = "<group>"; };
 		B99D06AE160DE181003C88A5 /* wrench.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = wrench.png; sourceTree = "<group>"; };
@@ -129,8 +129,8 @@
 				B9F8A14C160B5D7500D745C8 /* Supporting Files */,
 				B95E5BF3160F64D8003CE239 /* chance.h */,
 				B95E5BF4160F64D8003CE239 /* chance.m */,
-				B95E5BF91610B614003CE239 /* UIWebControll.h */,
-				B95E5BFA1610B614003CE239 /* UIWebControll.m */,
+				B95E5CE11611E791003CE239 /* expUIWeb.h */,
+				B95E5CE21611E791003CE239 /* expUIWeb.m */,
 			);
 			path = SD_bot;
 			sourceTree = "<group>";
@@ -234,7 +234,7 @@
 				B9F8A15C160B5D7500D745C8 /* SD_botFirstViewController.m in Sources */,
 				B9F8A163160B5D7500D745C8 /* SD_botSecondViewController.m in Sources */,
 				B95E5BF5160F64D8003CE239 /* chance.m in Sources */,
-				B95E5BFB1610B614003CE239 /* UIWebControll.m in Sources */,
+				B95E5CE31611E791003CE239 /* expUIWeb.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +316,7 @@
 				GCC_PREFIX_HEADER = "SD_bot/SD_bot-Prefix.pch";
 				INFOPLIST_FILE = "SD_bot/SD_bot-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -330,6 +331,7 @@
 				GCC_PREFIX_HEADER = "SD_bot/SD_bot-Prefix.pch";
 				INFOPLIST_FILE = "SD_bot/SD_bot-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;

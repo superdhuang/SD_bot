@@ -9,14 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "chance.h"
 
-@interface SD_botFirstViewController : UIViewController <UIWebViewDelegate>{
+@interface SD_botFirstViewController : UIViewController{
     IBOutlet UITextView *content;
-    IBOutlet UIWebView *expweb;
-    chance *chanceObj; // = [chance alloc];    
+    chance *chanceObj;
 }
-
-
-//@property (nonatomic, retain) IBOutlet UIWebView *expweb;
 
 @end
 

@@ -8,7 +8,7 @@
 
 #import "SD_botFirstViewController.h"
 #import "chance.h"
-#import "UIWebControll.h"
+#import "expUIWeb.h"
 
 @interface SD_botFirstViewController ()
 
@@ -20,13 +20,7 @@
 {
     [super viewDidLoad];
     chanceObj = [[chance alloc] init];
-    
-    //    NSURL *url = [NSURL URLWithString:@""];
-    //    NSURLRequest *request = [NSURLRequest requestWithURL:url];
-    //    [webview loadRequest:request];
-    //NSLog(@"%@", chanceObj.res);
-
-    
+        
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -38,9 +32,6 @@
 
 - (IBAction)explainButtonPressed:(id)sender
 {
-    NSString *URLString = [NSString stringWithFormat:@"http://superd.tw/a.php?a=%03i",chanceObj.res];
-    NSLog(@"%@", URLString);
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:URLString]];
 }
 
 - (void)viewDidUnload
@@ -52,6 +43,14 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"passcode"]) {
+        expUIWeb *destViewController = segue.destinationViewController;
+        
+        destViewController.url = [NSString stringWithFormat:@"http://superd.tw/a.php?a=%03i",chanceObj.res];
+    }
 }
 
 @end

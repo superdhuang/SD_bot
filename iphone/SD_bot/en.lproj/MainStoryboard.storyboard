@@ -55,7 +55,7 @@
                                 </state>
                                 <connections>
                                     <action selector="explainButtonPressed:" destination="2" eventType="touchUpInside" id="l8Q-jU-J58"/>
-                                    <segue destination="poU-Wg-Eex" kind="modal" id="Yo1-QO-cSa"/>
+                                    <segue destination="poU-Wg-Eex" kind="modal" identifier="passcode" id="kVV-Og-S61"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -68,28 +68,43 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="10" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="695" y="-192"/>
+            <point key="canvasLocation" x="639" y="-280"/>
         </scene>
-        <!--View Controller-->
+        <!--ExpUI Web-->
         <scene sceneID="U28-gL-GQy">
             <objects>
-                <viewController id="poU-Wg-Eex" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="WcS-rY-FRw" customClass="UIWebControll">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                <viewController id="poU-Wg-Eex" customClass="expUIWeb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WcS-rY-FRw" userLabel="View">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" id="I4k-Hv-T82">
-                                <rect key="frame" x="43" y="244" width="320" height="548"/>
+                            <webView contentMode="scaleToFill" scalesPageToFit="YES" id="I4k-Hv-T82">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="420"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             </webView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="pQq-wJ-rfc">
+                                <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem title="Back" id="FTQ-UN-EuJ">
+                                        <connections>
+                                            <segue destination="4" kind="modal" id="aTg-gF-rBs"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="expWebView" destination="I4k-Hv-T82" id="Fux-Ot-Cu2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1Qo-Tb-8mq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1109" y="-461"/>
+            <point key="canvasLocation" x="1105" y="-429"/>
         </scene>
         <!--關於-->
         <scene sceneID="I6A-1D-cg4">
@@ -234,7 +249,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/SD_botFirstViewController.h"/>
             <relationships>
                 <relationship kind="outlet" name="content" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="expweb" candidateClass="UIWebView"/>
             </relationships>
         </class>
         <class className="SD_botSecondViewController" superclassName="UIViewController">
@@ -246,6 +260,12 @@
                 <relationship kind="outlet" name="dictCntLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dictFailLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="dictSuccLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="expUIWeb" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/expUIWeb.h"/>
+            <relationships>
+                <relationship kind="outlet" name="expWebView" candidateClass="UIWebView"/>
             </relationships>
         </class>
     </classes>
